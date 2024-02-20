@@ -23,7 +23,7 @@ const getAllUsers = async (req, res) => {
     }
 }
 
-module.exports ={
+module.exports = {
     signupUser:signupUser,
     getAllUsers:getAllUsers,
 };
