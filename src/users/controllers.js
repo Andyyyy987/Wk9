@@ -13,6 +13,14 @@ const signupUser = async (req, res) => {
         res.status(500).json({message: error.message, error:error});
     }
 };
+const login = async (req, res) => {
+    try {
+        res.status(201).json({ message: "login success", user: req.user });
+    } catch (error) {
+        res.status(500).json({ message: error.message, error: error });
+    }
+};
+
 
 const getAllUsers = async (req, res) => {
     try {
@@ -26,4 +34,5 @@ const getAllUsers = async (req, res) => {
 module.exports = {
     signupUser:signupUser,
     getAllUsers:getAllUsers,
+    login: login,
 };
